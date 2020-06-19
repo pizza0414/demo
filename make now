@@ -4,9 +4,17 @@
 <b>coming soon</b>
 </head>
 <body>
+<p>
 <script type="text/javascript">
-var random = Math.ceil( Math.random()*10 );
-var random = Math.ceil( Math.random()*10 );
+var rand = Math.floor(Math.random() * 9) + 1; 
+A = document.write(rand); 
+document.write("<b>×</b>");　
+var rand = Math.floor(Math.random() * 9) + 1; 
+B = document.write(rand); 
+document.write("<b>＝</b>");　
 </script>
+<input type="text" id="input_ans" value="">
+    <input type="button" onclick="ans()" value="next">
+</p>
 </body>
 </html>
