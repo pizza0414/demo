@@ -6,15 +6,29 @@
 <body>
 <p>
 <script type="text/javascript">
-var rand = Math.floor(Math.random() * 9) + 1; 
-A = document.write(rand); 
-document.write("<b>×</b>");　
-var rand = Math.floor(Math.random() * 9) + 1; 
-B = document.write(rand); 
-document.write("<b>＝</b>");　
+var rand1 = Math.floor(Math.random() * 9) + 1; 
+document.write(rand1); 
+document.write("<b>×</b>");
+var rand2 = Math.floor(Math.random() * 9) + 1;
+document.write(rand2); 
+document.write("<b>＝</b>");
 </script>
 <input type="text" id="input_ans" value="">
-    <input type="button" onclick="ans()" value="next">
+    <input type="button" onclick="check()" value="next">
+ <script type="text/javascript">
+      function check(ans){
+	var rand3 = rand1 * rand2;
+
+	console.log("ans is " + ans);
+
+        if(ans == rand3){
+       //target_write  
+        } else {
+           document.getElementById("die").innerHTML = "残念";
+        }
+      }
+    </script>
+ <div id="die">何問とけるかな</div>
 </p>
 </body>
 </html>
