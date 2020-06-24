@@ -12,22 +12,21 @@ document.write("<b>×</b>");
 var rand2 = Math.floor(Math.random() * 9) + 1;
 document.write(rand2); 
 document.write("<b>＝</b>");
-</script>
-<input type="text" id="input_ans" value="">
-    <input type="button" onclick="check()" value="next">
- <script type="text/javascript">
-      function check(ans){
+      function check(){
+	var ansvalue = document.getElementById("ans").value;
 	var rand3 = rand1 * rand2;
 
-	console.log("ans is " + ans);
+	console.log("ans is " + ansvalue);
 
-        if(ans == rand3){
-       //target_write  
+        if(ansvalue == rand3){
+           document.getElementById("die").innerHTML = "ok";
         } else {
            document.getElementById("die").innerHTML = "残念";
         }
       }
     </script>
+<input type="text" id="ans" value="">
+    <input type="button" onclick="check()" value="next">
  <div id="die">何問とけるかな</div>
 </p>
 </body>
