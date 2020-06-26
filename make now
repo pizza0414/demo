@@ -5,7 +5,7 @@
 </head>
 <body>
 <p>
-<b><span id="q1">x</span>×<span id="q2">y</span>=?</b>
+<b><span id="q1"></span>×<span id="q2"></span>=?</b>
 <script type="text/javascript"> 
   var rand1 = get_random();
   var rand2 = get_random()
@@ -19,13 +19,15 @@
 	console.log("ans is " + ansvalue);
 
         if(ansvalue == rand3){
-	  document.getElementById("die").innerHTML = "x問連続正解中！";
+　        var point = point + 1;
+	  document.getElementById("die").innerHTML = String(point);
           rand1 = get_random()
           rand2 = get_random()
 	  document.getElementById("q1").innerHTML = String(rand1);
 	  document.getElementById("q2").innerHTML = String(rand2);
         } else {
-           document.getElementById("die").innerHTML = "残念";
+           document.getElementById("die").innerHTML = "残念! 0";
+	  var point = 0
         }
       }
 
@@ -36,6 +38,8 @@
 </p>
 <input type="text" id="ans" value="">
     <input type="button" onclick="check()" value="next">
- <div id="die">何問とけるかな</div>
+<p>
+ <b><span id="die"></span>問連続正解中</b>
+</p>
 </body>
 </html>
