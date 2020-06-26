@@ -5,13 +5,13 @@
 </head>
 <body>
 <p>
-<script type="text/javascript">
-var rand1 = Math.floor(Math.random() * 9) + 1; 
-document.write(rand1); 
-document.write("<b>×</b>");
-var rand2 = Math.floor(Math.random() * 9) + 1;
-document.write(rand2); 
-document.write("<b>＝</b>");
+<b><span id="q1">x</span>×<span id="q2">y</span>=?</b>
+<script type="text/javascript"> 
+  var rand1 = get_random();
+  var rand2 = get_random()
+  document.getElementById("q1").innerHTML = String(rand1);
+  document.getElementById("q2").innerHTML = String(rand2);
+
       function check(){
 	var ansvalue = document.getElementById("ans").value;
 	var rand3 = rand1 * rand2;
@@ -19,15 +19,23 @@ document.write("<b>＝</b>");
 	console.log("ans is " + ansvalue);
 
         if(ansvalue == rand3){
-           document.getElementById("die").innerHTML = "ok";
+	  document.getElementById("die").innerHTML = "x問連続正解中！";
+          rand1 = get_random()
+          rand2 = get_random()
+	  document.getElementById("q1").innerHTML = String(rand1);
+	  document.getElementById("q2").innerHTML = String(rand2);
         } else {
            document.getElementById("die").innerHTML = "残念";
         }
       }
+
+  function get_random(){
+    return (Math.floor(Math.random() * 99) + 1);
+  }
     </script>
+</p>
 <input type="text" id="ans" value="">
     <input type="button" onclick="check()" value="next">
  <div id="die">何問とけるかな</div>
-</p>
 </body>
 </html>
