@@ -1,0 +1,16 @@
+<html>
+<head>
+<meta charset="utf-8">
+<b>coming soon</b>
+</head>
+<body>
+<script type="text/javascript">
+
+  var min = 2;
+  var max = 999;
+  var rand = get_random();
+  document.getElementById("ques").innerHTML = String(rand1);
+  function get_random(){
+  return Math.floor( Math.random() * (max + 1 - min) ) + min ;
+  
+  <span id="ques">
