@@ -1,12 +1,16 @@
 <html>
 <head>
 <meta charset="utf-8">
-<b>coming soon</b>
+<b>無限掛け算(10∼99×10∼99)</b>
 </head>
 <body>
 <p>
 <b><span id="q1"></span>×<span id="q2"></span>=?</b>
-<script type="text/javascript"> 
+<script type="text/javascript">
+
+  var min = 10;
+  var max = 99;
+
   var rand1 = get_random();
   var rand2 = get_random();
   document.getElementById("q1").innerHTML = String(rand1);
@@ -32,14 +36,15 @@
       }
 
   function get_random(){
-    return (Math.floor(Math.random() * 99) + 1);
+    return Math.floor( Math.random() * (max + 1 - min) ) + min ;
   }
     </script>
 </p>
 <input type="text" id="ans" value="">
     <input type="button" onclick="check()" value="next">
 <p>
- <b><span id="die"></span>問連続正解中</b>
+ <b><span id="die">0</span></b>
+ 問連続正解中
 </p>
 </body>
 </html>
