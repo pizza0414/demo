@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta charset="utf-8">
+<b>coming soon</b>
+</head>
+<body>
+<p>
+<b><span id="ques"></span></b>
+<script type="text/javascript">
+  var min = 2;
+  var max = 999;
+  var rand = get_random();
+  document.getElementById("ques").innerHTML = String(rand); 
+      var point = 0;
+      function check(){
+	var ansvalue = document.getElementById("ans").value;
+        if(ansvalue == rand){
+　        point = point + 1;
+	  document.getElementById("die").innerHTML = String(point);
+          rand = get_random()
+	  document.getElementById("ques").innerHTML = String(rand);
+        } else {
+          document.getElementById("die").innerHTML = "残念! 0";
+	  point = 0;
+        }
+      }
+  function get_random(){
+    return Math.floor( Math.random() * (max + 1 - min) ) + min ;
+    }
+</script>
+</p>
+<input type="text" id="ans" value="">
+    <input type="button" onclick="check()" value="next">
+<p>
+ <b><span id="die">0</span></b>
+ 問連続正解中
+</p>
+</body>
+</html>
