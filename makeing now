@@ -1,24 +1,26 @@
 <html>
 <head>
 <meta charset="utf-8">
-<b>coming soon</b>
+<b>次の時間(1s∼20s)の間落下した物体の落下距離(m)を求めよ。但し、重力加速度は9.8とする</b>
 </head>
 <body>
 <p>
 <b><span id="ques"></span></b>
 <script type="text/javascript">
-  var min = 2;
-  var max = 999;
+  var min = 1;
+  var max = 20;
   var rand = get_random();
+  var rand2nd = rand*rand*4.9
   document.getElementById("ques").innerHTML = String(rand); 
       var point = 0;
       function check(){
 	var ansvalue = document.getElementById("ans").value;
-        if(ansvalue == rand){
+        if(ansvalue == rand2nd){
 　        point = point + 1;
 	  document.getElementById("die").innerHTML = String(point);
           rand = get_random()
 	  document.getElementById("ques").innerHTML = String(rand);
+	  document.getElementById("ans").innerHTML = ""
         } else {
           document.getElementById("die").innerHTML = "残念! 0";
 	  point = 0;
