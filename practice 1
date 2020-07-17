@@ -25,6 +25,7 @@
         if(ansvalue == rand3){
 　        point = point + 1;
 	  document.getElementById("die").innerHTML = String(point);
+	  document.kaitou.reset();
           rand1 = get_random()
           rand2 = get_random()
 	  document.getElementById("q1").innerHTML = String(rand1);
@@ -40,8 +41,10 @@
   }
     </script>
 </p>
+<form name="kaitou">
 <input type="text" id="ans" value="">
     <input type="button" onclick="check()" value="next">
+<form>
 <p>
  <b><span id="die">0</span></b>
  問連続正解中
