@@ -44,7 +44,7 @@
 <form name="kaitou">
 <input type="text" id="ans" value="">
     <input type="button" onclick="check()" value="next">
-<form>
+</form>
 <p>
  <b><span id="die">0</span></b>
  問連続正解中
