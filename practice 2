@@ -16,7 +16,6 @@
       function check(){
 	var ansvalue = document.getElementById("ans").value;
         var rand2nd = rand * rand * gravity / 10
-        console.log(rand2nd);
         if(ansvalue == rand2nd){
 　        point = point + 1;
 	  document.getElementById("die").innerHTML = String(point);
