@@ -9,18 +9,20 @@
 <script type="text/javascript">
   var min = 1;
   var max = 20;
+  var gravity = 49;
   var rand = get_random();
-  var rand2nd = rand*rand*4.9
   document.getElementById("ques").innerHTML = String(rand); 
       var point = 0;
       function check(){
 	var ansvalue = document.getElementById("ans").value;
+        var rand2nd = rand * rand * gravity / 10
+        console.log(rand2nd);
         if(ansvalue == rand2nd){
 　        point = point + 1;
 	  document.getElementById("die").innerHTML = String(point);
-          rand = get_random()
+	  document.kaitou.reset();
+	  rand = get_random();
 	  document.getElementById("ques").innerHTML = String(rand);
-	  document.getElementById("ans").innerHTML = ""
         } else {
           document.getElementById("die").innerHTML = "残念! 0";
 	  point = 0;
@@ -31,6 +33,7 @@
     }
 </script>
 </p>
+<form name="kaitou">
 <input type="text" id="ans" value="">
     <input type="button" onclick="check()" value="next">
 <p>
