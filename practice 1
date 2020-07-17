@@ -7,21 +7,16 @@
 <p>
 <b><span id="q1"></span>×<span id="q2"></span>=?</b>
 <script type="text/javascript">
-
   var min = 10;
   var max = 99;
-
   var rand1 = get_random();
   var rand2 = get_random();
   document.getElementById("q1").innerHTML = String(rand1);
   document.getElementById("q2").innerHTML = String(rand2);
-
       var point = 0;
-
       function check(){
 	var ansvalue = document.getElementById("ans").value;
 	var rand3 = rand1 * rand2
-
         if(ansvalue == rand3){
 　        point = point + 1;
 	  document.getElementById("die").innerHTML = String(point);
@@ -35,7 +30,6 @@
 	  point = 0;
         }
       }
-
   function get_random(){
     return Math.floor( Math.random() * (max + 1 - min) ) + min ;
   }
