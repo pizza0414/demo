@@ -1,0 +1,22 @@
+<html>
+<head>
+<meta charset="utf-8">
+<b>coming soon</b>
+</head>
+<body>
+<script type="text/javascript">
+function check(){
+var tyu = document.getElementById("aaa").value;
+var min = 1
+var max = String(tyu);
+Math.floor( Math.random() * (max + 1 - min) ) + min ;
+var tousen = get_random();
+document.getElementById("ppp").innerHTML = String(tousen);
+  }
+</script>
+<b>抽選人数</b>
+<p><input type="text" id="aaa" value="">
+<input type="button" onclick="check()" value="抽選"></p>
+<b>当選番号<div id="ppp"></div></b>
+</body>
+</html>
