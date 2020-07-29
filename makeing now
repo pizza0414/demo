@@ -8,7 +8,7 @@
 function check1(){
 var pass1 = document.getElementById("tid").value;
 if(pass1 == "teacherform"){
-	  document.getElementById("error1").innerHTML = "製作中";
+	   
         } else {
 	  document.getElementById("error1").innerHTML = "IDが間違っています";
         }
@@ -20,17 +20,20 @@ if(pass2 == "studentform"){
         } else {
 	  document.getElementById("error2").innerHTML = "IDが間違っています";
         }
+      }
 </script>
-<p id="1st">
+<div class="1st">
  <b>教師用ID</b>
  <input type="text" id="tid" value="">
     <input type="button" onclick="check1()" value="ログイン">
  <span id="error1"></span>
- <p></p>
  <b>生徒用ID</b>
  <input type="text" id="sid" value="">
     <input type="button" onclick="check2()" value="ログイン">
  <span id="error2"></span>
-</p>
+</div>
+<div class="2nd">
+あああああ
+</div>
 </body>
 </html>
