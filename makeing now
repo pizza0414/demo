@@ -1,39 +1,6 @@
 <html>
 <head>
 <meta charset="utf-8">
-<b>schoolなんとか</b>
+<b>making now</b>
 </head>
-<body>
-<script type="text/javascript">
-function check1(){
-var pass1 = document.getElementById("tid").value;
-if(pass1 == "teacherform"){
-	   
-        } else {
-	  document.getElementById("error1").innerHTML = "IDが間違っています";
-        }
-      }
-function check2(){
-var pass2 = document.getElementById("sid").value;
-if(pass2 == "studentform"){
-	  document.getElementById("error2").innerHTML = "製作中";
-        } else {
-	  document.getElementById("error2").innerHTML = "IDが間違っています";
-        }
-      }
-</script>
-<div class="1st">
- <b>教師用ID</b>
- <input type="text" id="tid" value="">
-    <input type="button" onclick="check1()" value="ログイン">
- <span id="error1"></span>
- <b>生徒用ID</b>
- <input type="text" id="sid" value="">
-    <input type="button" onclick="check2()" value="ログイン">
- <span id="error2"></span>
-</div>
-<div class="2nd">
-あああああ
-</div>
-</body>
 </html>
