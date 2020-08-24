@@ -3,4 +3,26 @@
 <meta charset="utf-8">
 <b>making now</b>
 </head>
+<body>
+<span id="bingo"></span>
+<span id="munber"></span>
+<script type="text/javascript">
+  var min = 1;
+  var max = 75;
+  var rand = get_random();
+document.getElementById("munber").innerHTML = String(rand);
+if(0 < rand < 16){
+document.getElementById("bingo").innerHTML = String("B");
+}
+function make(){
+    rand = get_random()
+    document.getElementById("munber").innerHTML = String(rand);
+}
+function get_random(){
+    return Math.floor( Math.random() * (max + 1 - min) ) + min ;
+}
+</script>
+<p></p>
+<input type="button" onclick="make()" value="抽選">
+</body>
 </html>
