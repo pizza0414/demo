@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<b>making now</b>
+<b>ニャーwwwwwwwwwwww</b>
 </head>
 <body>
 <span id="bingo"></span>
@@ -9,14 +9,25 @@
 <script type="text/javascript">
   var min = 1;
   var max = 75;
-  var rand = get_random();
-document.getElementById("munber").innerHTML = String(rand);
-if(0 < rand < 16){
-document.getElementById("bingo").innerHTML = String("B");
-}
+  var rand = get_random()
 function make(){
     rand = get_random()
     document.getElementById("munber").innerHTML = String(rand);
+if((1 <= rand) && (rand <= 15)){
+    document.getElementById("bingo").innerHTML = String("B");
+    }
+if((16 <= rand) && (rand <= 30)){
+    document.getElementById("bingo").innerHTML = String("I");
+    }
+if((31 <= rand) && (rand <= 45)){
+    document.getElementById("bingo").innerHTML = String("G");
+    }
+if((46 <= rand) && (rand <= 60)){
+    document.getElementById("bingo").innerHTML = String("N");
+    }
+if((61 <= rand) && (rand <= 75)){
+    document.getElementById("bingo").innerHTML = String("O");
+    }
 }
 function get_random(){
     return Math.floor( Math.random() * (max + 1 - min) ) + min ;
